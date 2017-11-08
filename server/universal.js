@@ -5,7 +5,7 @@ const { Provider } = require('react-redux')
 const { renderToString } = require('react-dom')
 const { StaticRouter } = require('react-router-dom')
 
-const { default: configureStore } = require('../src/store')
+const { default: store } = require('../src/store')
 const { default: App } = require('../src/components/App')
 
 module.exports = (req, res) => {
@@ -16,7 +16,6 @@ module.exports = (req, res) => {
             return res.status(500).end()
         }
         const context = {}
-        const store = configureStore()
         const markup = renderToString(
           <Provider store={store}>
             <StaticRouter
