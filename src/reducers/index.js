@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import todos from './todos'
+import articles from './articles'
 
 export default combineReducers({
-  todos,
+  articles,
 })
