@@ -16,8 +16,8 @@ const app = express()
 app.use(compression())
 app.use(morgan('combined'))
 
+app.get('/', universal)
 app.use(express.static(path.resolve(__dirname, '..', 'build')))
-
 app.use('/', universal)
 
 module.exports = app

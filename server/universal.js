@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const React = require('react')
 const { Provider } = require('react-redux')
-const { renderToString } = require('react-dom')
+const { renderToString } = require('react-dom/server')
 const { StaticRouter } = require('react-router-dom')
 
 const { default: store } = require('../src/store')
